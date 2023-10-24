@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array Shuffling</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/array-unsort@1.1.0/src/index.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="controls-container">
+    <div class="radios-container">
+      <div class="radio-container">
+        <input type="radio" name="inlineRadioOptions" id="algo0" value="fisher-yates">
+        <label for="inlineRadio1">Fisher-Yates</label>
+      </div>
+      <div class="radio-container">
+        <input type="radio" name="inlineRadioOptions" id="algo1" value="unique-idx" checked>
+        <label for="inlineRadio2">Modified Fisher-Yates</label>
+      </div>
+    </div>
+    <div>
+      <label for="iterationsRange">Iterations</label>
+      <input min="0" max="6" type="range" value="4" class="form-control-range" id="iterationsRange">
+      <div class="range-value" id="iterations">10k</div>
+    </div>
+    <div>
+      <label for="arraySizeRange">Array Size</label>
+      <input min="2" max="20" type="range" value="8" class="form-control-range" id="arraySizeRange">
+      <div class="range-value" id="arraySize">8</div>
+    </div>
+    <div>
+      <button id="goButton">Go</button>
+    </div>
+  </div>
+  <div class="container"></div>
+</body>
+</html>
